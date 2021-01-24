@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Work+Sans:wght@700&display=swap");
+
+:root {
+  font-size: 62.5%;
+  --display-font: Rubik, sans-serif;
+  --font-light: 300;
+  --font-medium: 500;
+  --font-bold: 700;
+  --color-primary: #aa0055;
+  --color-secondary: #79c000;
+  --color-danger: #d32f2f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--display-font);
+  font-weight: var(--font-medium);
+
+  margin: 5vh 15vw;
+}
+
+.display-box_container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid lightgray;
+
+  .display-box {
+    display: inline-block;
+    margin: 2rem;
+
+    pre {
+      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: small;
+  font-weight: 300;
+  color: lightgray;
+  text-align: center;
+}
+
+// Material start/end icons for button
+// .material-icons {
+//   font-size: 2rem;
+//   font-weight: var(--font-light);
+// }
+
+// .start-icon {
+//   margin-right: 1rem;
+// }
+
+// .end-icon {
+//   margin-left: 1rem;
+// }

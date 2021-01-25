@@ -12,4 +12,4 @@ A React Input (field) component for React
 - `multiLine` to use textarea instead of regular input field
 - All regular input attributes also accessible
 
-[### Demo](https://input-component-nine.vercel.app/)
+### [Demo](https://input-component-nine.vercel.app/)

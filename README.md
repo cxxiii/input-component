@@ -11,3 +11,5 @@ A React Input (field) component for React
 - `fullWidth` to span whole width of parent container
 - `multiLine` to use textarea instead of regular input field
 - All regular input attributes also accessible
+
+[### Demo](https://input-component-nine.vercel.app/)

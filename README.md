@@ -1,4 +1,4 @@
-A React Input (field) component for React
+A React Input (field) component
 
 ## Properties
 

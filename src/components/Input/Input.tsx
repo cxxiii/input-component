@@ -8,6 +8,7 @@ type Sizes = "sm" | "md" | "lg";
 
 const Input: FunctionComponent<
   {
+    label: String;
     error?: boolean;
     disabled?: boolean;
     helperText?: String;
@@ -17,9 +18,9 @@ const Input: FunctionComponent<
     size?: Sizes;
     fullWidth?: boolean;
     multiLine?: boolean;
-    rows?: Number;
   } & React.HTMLAttributes<HTMLInputElement>
 > = ({
+  label,
   error,
   disabled,
   helperText,
@@ -28,19 +29,38 @@ const Input: FunctionComponent<
   size,
   fullWidth,
   multiLine,
-  rows,
   ...props
 }) => {
   const classNames = cn({
     [styles.Input]: Input,
-    // [styles[`Button_variant_${variant}`]]: variant,
-    // [styles.Button_disableShadow]: disableShadow,
-    // [styles.Button_disabled]: disabled,
-    // [styles[`Button_size_${size}`]]: size,
-    // [styles[`Button_color_${color}`]]: color,
+    [styles.Input_error]: error,
+    [styles.Input_disabled]: disabled,
+    [styles.Input_startIcon_offset]: startIcon,
+    [styles.Input_endIcon_offset]: endIcon,
+    [styles[`Input_size_${size}`]]: size,
+    [styles.Input_fullWidth]: fullWidth,
+    [styles.Input_textarea]: multiLine,
   });
 
-  return <input className={classNames} {...props} />;
+  return (
+    <div className={styles.Input_container}>
+      <label className={styles.Input_label} htmlFor="Input">
+        {label}
+      </label>
+      {!multiLine ? (
+        <input className={classNames} name="Input" {...props} />
+      ) : (
+        <textarea className={classNames} name="Input" />
+      )}
+      {startIcon && !size && !fullWidth && (
+        <i className="material-icons start-icon">{startIcon}</i>
+      )}
+      {endIcon && !size && !fullWidth && (
+        <i className="material-icons end-icon">{endIcon}</i>
+      )}
+      <div className={styles.Input_helperText}>{helperText}</div>
+    </div>
+  );
 };
 
 export default Input;

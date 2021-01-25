@@ -31,6 +31,7 @@ body {
 }
 
 .display-box_container {
+  width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-bottom: 0.1rem solid lightgray;
@@ -56,15 +57,25 @@ footer {
 }
 
 // Material start/end icons for button
-// .material-icons {
-//   font-size: 2rem;
-//   font-weight: var(--font-light);
-// }
+.material-icons {
+  font-size: 2rem;
+  font-weight: var(--font-light);
+}
 
-// .start-icon {
-//   margin-right: 1rem;
-// }
+.start-icon {
+  position: absolute;
+  margin-top: 2.8rem;
+  margin-left: 1rem;
 
-// .end-icon {
-//   margin-left: 1rem;
-// }
+  filter: invert(52%) sepia(10%) saturate(19%) hue-rotate(317deg)
+    brightness(96%) contrast(87%);
+}
+
+.end-icon {
+  position: absolute;
+  margin-top: 2.8rem;
+  margin-left: 20.5rem;
+
+  filter: invert(52%) sepia(10%) saturate(19%) hue-rotate(317deg)
+    brightness(96%) contrast(87%);
+}

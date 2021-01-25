@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.Input_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  color: #333333;
+
+  .Input_label {
+    font-family: var(--display-font);
+    font-weight: var(--font-light);
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .Input {
+    padding: 1.5rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #828282;
+    width: 24rem;
+
+    font-weight: var(--font-medium);
+
+    &:hover {
+      border: 0.2rem solid #333333;
+    }
+
+    &:focus {
+      border: 0.2rem solid #2962ff;
+      .Input_container {
+        color: #2962ff;
+      }
+    }
+
+    &_error {
+      border: 0.2rem solid #d32f2f;
+    }
+
+    &_disabled {
+      background-color: #f2f2f2;
+      border: 0.1rem solid #e0e0e0;
+      pointer-events: none;
+    }
+
+    &_helperText {
+      font-size: 1rem;
+      font-weight: var(--font-light);
+    }
+
+    &_startIcon_offset {
+      padding-left: 4rem;
+    }
+
+    &_endIcon_offset {
+      padding-right: 4rem;
+    }
+
+    &_size_sm {
+      padding: 1rem;
+    }
+
+    &_size_md {
+      padding: 1.5rem;
+    }
+
+    &_size_lg {
+      padding: 2rem;
+    }
+
+    &_fullWidth {
+      width: 100%;
+    }
+
+    &_textarea {
+      width: 50%;
+      height: 12rem;
+    }
+  }
+}
